@@ -1,0 +1,52 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <category>
+        <pattern>HI</pattern>
+        <template>
+            Hello, how can I help?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>I AM LOOKING TO BUY A CAR</pattern>
+        <template>
+            Ok, firstly tell me what fuel type you are after... 
+        </template>
+    </category>
+    
+   <category>
+      <pattern>I WOULD LIKE A * ENGINE</pattern>
+      <template>
+         Thanks, I will only search for <set name="fuel"><star/></set> engines. Any preference on colour?
+      </template>  
+   </category>
+   
+   <category>
+	  <pattern>I WANT SOMETHING *</pattern>
+	  <template>
+		 Ok, any car which is not <set name="colour"><star/></set> will be ommitted from results. What about the model?
+	  </template>
+   </category>
+   
+   <category>
+	  <pattern>I AM LOOKING FOR A *</pattern>
+      <template>
+		  Perfect! I would like a <set name="model"><star/></set> myself.
+      </template>
+   </category>
+   
+   <category>
+	  <pattern>I AM LOOKING FOR * DOORS</pattern>
+      <template>
+		  <set name="doors"><star/></set> doors is all I will search for.
+      </template>
+   </category>
+     
+   <category>
+      <pattern>SEARCH FOR MY *</pattern>
+      <template>
+         Sure! Searching my database for your <set name="search"><star/></set>!
+      </template>  
+   </category>
+
+</aiml>
