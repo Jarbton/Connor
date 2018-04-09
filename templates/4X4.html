@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title> Car Connoisseur </title>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='SportSight.css') }}"/>
+		<link href="SportSight.css" rel="stylesheet">
 		<meta charset="utf-8">
 	<style>
 h3 { font-size: 1.6em; text-align: center; font-weight: bold; font-family: sans-serif; }
@@ -24,18 +24,16 @@ h4 {padding: 5px; margin: 5px;}
 	<body>
 
 	<header>
-<a href="/templates/login.html"><h4> Log in/Register </h4></a>
-			<h1> Car Connoisseur </h1>
-   <script type="text/javascript">
-	alert("Welcome to Car Connoisseur! check out Connor");
-	</script>
+<a href="login.html"><h4> Log in/Register </h4></a>
+			<h1> 4X4 </h1>
+   
 	
 	</header>
 	<nav>
-	<a href="{{ url_for('home_form') }}">HOME</a> <a href="{{ url_for('four_form') }}">4x4</a> <a href="{{ url_for('saloon_form') }}">Saloon</a> <a href="{{ url_for('hatchback_form') }}">Hatchback</a> <a href="{{ url_for('convertible_form') }}">Convertible</a> <a href="{{ url_for('estate_form') }}">Estate</a> <a href="{{ url_for('coupe_form') }}">Coupe</a> <a href="{{ url_for('contact_form') }}">ContactUs</a>
+<a href="home.html">HOME</a> <a href="4x4.html">4x4</a> <a href="Saloon.html">Saloon</a> <a href="Hatchback.html">Hatchback</a> <a href="Convertible.html">Convertible</a> <a href="Estate.html">Estate</a> <a href="Coupe.html">Coupe</a> <a href="Contact.html">ContactUs</a>
  	</nav>
 	<main>  
-			<h2> Have a chat with connor </h2>
+			
 <style>
 body {font-family: Arial;}
 
@@ -79,8 +77,9 @@ body {font-family: Arial;}
 </head>
 <body>
 
-<p>Click on the buttons inside the tabbed menu:</p>
 
+ 
+			<h2> Have a chat with connor </h2>
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London')">Conner</button>
   
@@ -92,7 +91,6 @@ body {font-family: Arial;}
   <h3>Here to help</h3>
 <img src="profilepic.jpeg" alt="Connor"  width="300" height="200">
   <p>This is where the interaction will occur.</p>
-
 </div>
 
 
@@ -112,55 +110,53 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 </script>
-</body>
+
 			
 			<table style="width:100%">		
 		
 		<center>
 		<div><h3>The new Range Rover</h3>
 			<a href="guessfact.html">
-			<img src="/static/Rover.jpeg" alt=“rover”  width="300" height="200">
-			<p> Introducing the new 2018 Range Rover </p>
-			</a>
-		</div>
-		<div><h3>The new BMW 430</h3>
-			<a href="guessfact.html">
-			<img src="/static/bmw.jpeg" alt=“rover”  width="300" height="200">
-			<p> Introducing the new 2018 BMW 430 </p>
-			</a>
-		</div>
-		<div><h3>The new Range Rover</h3>
-			<a href="guessfact.html">
-			<img src="/static/Rover.jpeg" alt=“rover”  width="300" height="200">
+			<img src="Rover.jpeg" alt=“rover”  width="300" height="200">
 			<p> Introducing the new 2018 Range Rover </p>
 			</a>
 		</div>
 		<div><h3>The new Range Rover</h3>
 			<a href="guessfact.html">
-			<img src="/static/Rover.jpeg" alt=“rover”  width="300" height="200">
+			<img src="Rover.jpeg" alt=“rover”  width="300" height="200">
 			<p> Introducing the new 2018 Range Rover </p>
 			</a>
 		</div>
 		<div><h3>The new Range Rover</h3>
 			<a href="guessfact.html">
-			<img src="/static/Rover.jpeg" alt=“rover”  width="300" height="200">
+			<img src="Rover.jpeg" alt=“rover”  width="300" height="200">
 			<p> Introducing the new 2018 Range Rover </p>
 			</a>
 		</div>
 		<div><h3>The new Range Rover</h3>
 			<a href="guessfact.html">
-			<img src="/static/Rover.jpeg" alt=“rover”  width="300" height="200">
+			<img src="Rover.jpeg" alt=“rover”  width="300" height="200">
+			<p> Introducing the new 2018 Range Rover </p>
+			</a>
+		</div>
+		<div><h3>The new Range Rover</h3>
+			<a href="guessfact.html">
+			<img src="Rover.jpeg" alt=“rover”  width="300" height="200">
+			<p> Introducing the new 2018 Range Rover </p>
+			</a>
+		</div>
+		<div><h3>The new Range Rover</h3>
+			<a href="guessfact.html">
+			<img src="Rover.jpeg" alt=“rover”  width="300" height="200">
 			<p> Introducing the new 2018 Range Rover </p>
 			</a>
 		</div>
 		</center>
 		
-	</main>
-<p><a href=" guessfact.html "  > Black 4X4 </a></p> 
-			<footer>Copyright &copy; 2017 Shuayb & Joe</footer>
-	</body>
 
-
+    </main>
+  <footer>Copyright &copy; 2017 Shuayb & Joe</footer>
+</body>
 </html>
 
 
