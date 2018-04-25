@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Car Connoisseur </title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mock.css') }}"/>
+		<meta charset="utf-8">
+	<style>
+h3 { font-size: 1.6em; text-align: center; font-weight: bold; font-family: sans-serif; }
+p { font-weight: bold; font-size: 1.2em; text-align: center; }
+ul {letter-spacing: 1px; text-align: left; list-style-type: circle;}
+div { display: inline-block; 
+  width: 500px;
+  margin: 10px;
+padding: 1px;
+  }
+li {margin: 10px;}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto; box-shadow: 0 0 10px #888888;}
+h4 {padding: 5px; margin: 5px;}
+	</style>
+	</head>
+	<body>
+
+	<header>
+<a href="/templates/login.html"><h4> Log in/Register </h4></a>
+			<center><h1> Car Connoisseur </h1>
+   <script type="text/javascript">
+	alert("Welcome to Car Connoisseur! check out Connor");
+	</script>
+	
+	</header>
+	<nav><h3>
+	<a href="{{ url_for('home_form') }}">Home</a> <a href="{{ url_for('four_form') }}">4x4  </a> <a href="{{ url_for('saloon_form') }}">Saloon  </a> <a href="{{ url_for('hatchback_form') }}">Hatchback  </a> <a href="{{ url_for('convertible_form') }}">Convertible  </a> <a href="{{ url_for('estate_form') }}">Estate</a> <a href="{{ url_for('coupe_form') }}">Coupe</a> <a href="{{ url_for('contact_form') }}">ContactUs </a>
+ 	</h3></nav>
+	<main>  
+	</center>
+			<h2> Have a chat with connor </h2>
+<style>
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+	//
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+</head>
+<body bgcolor="#E6E6FA">
+<p>Click on the buttons inside the tabbed menu:</p>
+<div id="overlay">
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Conner</button>
+</div>
+</div>
+
+<div id="London" class="tabcontent">
+<span onclick="this.parentElement.style.display='none'"
+  class="End chat">&times;</span>
+  <h3>Here to help</h3>
+<img src="/static/profilepic.jpeg" alt="Connor"  width="300" height="200">
+  <p>This is where the interaction will occur.</p>
+//////////////
+<div id="overlay">
+<div id="text">
+<div class="container" >
+    <div class="row chat-window col-xs-5 col-md-3" id="chat_window_1" style="margin-left:10px;">
+        <div class="col-xs-12 col-md-12">
+        	<div class="panel panel-default">
+                <div class="panel-heading top-bar">
+                    <div class="col-md-8 col-xs-8">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Chat - Miguel</h3>
+                    </div>
+                    <div class="col-md-4 col-xs-4" style="text-align: right;">
+                        <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
+                    </div>
+                </div>
+                <div class="panel-body msg_container_base">
+                    <div class="row msg_container base_sent">
+                        <div class="col-md-10 col-xs-10">
+                            <div class="messages msg_sent">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                    </div>
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                        <div class="col-md-10 col-xs-10">
+                            <div class="messages msg_receive">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                        <div class="col-xs-10 col-md-10">
+                            <div class="messages msg_receive">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row msg_container base_sent">
+                        <div class="col-xs-10 col-md-10">
+                            <div class="messages msg_sent">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                    </div>
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                        <div class="col-xs-10 col-md-10">
+                            <div class="messages msg_receive">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row msg_container base_sent">
+                        <div class="col-md-10 col-xs-10 ">
+                            <div class="messages msg_sent">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here..." />
+                        <span class="input-group-btn">
+                        <button class="btn btn-primary btn-sm" id="btn-chat">Send</button>
+                        </span>
+                    </div>
+                </div>
+    		</div>
+        </div>
+    </div>
+    </div>
+	
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-cog"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#" id="new_chat"><span class="glyphicon glyphicon-plus"></span> Novo</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-list"></span> Ver outras</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-remove"></span> Fechar Tudo</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span class="glyphicon glyphicon-eye-close"></span> Invisivel</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+//////////////
+</div>
+
+
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+			
+			<table style="width:100%">		
+		
+		<center>
+		<div><h3>The new Range Rover</h3>
+			<a href="guessfact.html">
+			<img src="/static/Rover.jpeg" alt=“rover”  width="300" height="200">
+			<p> Introducing the new 2018 Range Rover </p>
+			</a>
+		</div>
+		<div><h3>The new BMW 430</h3>
+			<a href="guessfact.html">
+			<img src="/static/bmw.jpeg" alt=“rover”  width="300" height="200">
+			<p> Introducing the new 2018 BMW 430 </p>
+			</a>
+		</div>
+		<div><h3>The new Range Rover</h3>
+			<a href="guessfact.html">
+			<img src="/static/Rover.jpeg" alt=“rover”  width="300" height="200">
+			<p> Introducing the new 2018 Range Rover </p>
+			</a>
+		</div>
+		<div><h3>The new Range Rover</h3>
+			<a href="guessfact.html">
+			<img src="/static/Rover.jpeg" alt=“rover”  width="300" height="200">
+			<p> Introducing the new 2018 Range Rover </p>
+			</a>
+		</div>
+		<div><h3>The new Range Rover</h3>
+			<a href="guessfact.html">
+			<img src="/static/Rover.jpeg" alt=“rover”  width="300" height="200">
+			<p> Introducing the new 2018 Range Rover </p>
+			</a>
+		</div>
+		<div><h3>The new Range Rover</h3>
+			<a href="guessfact.html">
+			<img src="/static/Rover.jpeg" alt=“rover”  width="300" height="200">
+			<p> Introducing the new 2018 Range Rover </p>
+			</a>
+		</div>
+		</center>
+		
+	</main>
+<p><a href=" guessfact.html "  > Black 4X4 </a></p> 
+			<footer>Copyright &copy; 2017 Shuayb & Joe</footer>
+	</body>
+
+
+</html>
+
+
+
+
+
