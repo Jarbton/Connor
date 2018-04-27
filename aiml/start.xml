@@ -1,11 +1,9 @@
 <aiml version="1.0">
 
     <category>
-        <pattern>LOAD AIML</pattern>
+        <pattern>LOAD AIML B</pattern>
         <template>
             <learn>aiml/chat.aiml</learn>
-            <learn>aiml/carinfo.aiml</learn>
-            <learn>aiml/filters.aiml</learn>
         </template>
     </category>
 
