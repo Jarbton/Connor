@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template><srai>Hi</srai></template>
+    </category>
+
+    <category>
+        <pattern>HEY</pattern>
+        <template><srai>Hi</srai></template>
+    </category>
+
+    <category>
+        <pattern>GOOD MORNING</pattern>
+        <template><srai>Hi</srai></template>
+    </category>
+
+    <category>
+        <pattern>GOOD AFTERNOON</pattern>
+        <template><srai>Hi</srai></template>
+    </category>
+
+    <category>
+        <pattern>GOOD EVENING</pattern>
+        <template><srai>Hi</srai></template>
+    </category>
+
+    <category>
+        <pattern>HI</pattern>
+        <template><random>
+          <li>Hello there! I'm Connor the Car Connessuer. I'm here to help you find the car of your dreams. What make of car would you like?</li>
+          <li>Hey! Connor here, I am able to assist you in buying a new car. What make of car would you like?</li>
+          <li>Connor the Car Connessuer at your service! Let's search for your new wheels. What make of car would you like?</li>
+        </random></template>
+    </category>
+
+    <category>
+        <pattern>NO PREFERENCE ON MAKE</pattern>
+        <template>I always get confused which model of car belongs to which manufacturer. Maybe you're the same... Is there a model you have in mind?</template>
+    </category>
+
+    <category>
+        <pattern>I WOULD LIKE A *</pattern>
+        <template>My Mother, A.L.I.C.E used to have a <set name="make"><star/></set>. Is there a model you have in mind?</template>
+    </category>
+
+    <category>
+        <pattern>NO PREFERENCE ON MODEL</pattern>
+        <template>That's fine! Many car manufacturers use the same model variants. Do you know the model variant you would like?</template>
+    </category>
+
+    <category>
+        <pattern>I WANT A *</pattern>
+        <template>Okay! Looking for a <set name="model"><star/></set>. Do you know the model variant you would like?</template>
+    </category>
+
+    <category>
+        <pattern>NO PREFERENCE ON MODEL VARIANT</pattern>
+        <template>I have never been too crazy on what variant my car is either. Let's talk money.. What is your maximum spend?</template>
+    </category>
+
+    <category>
+      <pattern>A * IDEALLY</pattern>
+      <template>Cool. I will keep an eye out for a <set name="variant"><star/></set>. What is your maximum spend?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON MAXIMUM SPEND</pattern>
+      <template>I wish I had the same luxury! What year is the oldest you would like the car to be from?</template>
+    </category>
+
+    <category>
+      <pattern>I HAVE * TO SPEND</pattern>
+      <template><set name="price"><star/></set> seems like a reasonable amount. What year is the oldest you would like the car to be from?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON YEAR OF MANUFACTURE</pattern>
+      <template>No car in history will be ruled out. Unfortunatley I do not sell horse and carriage. How about colour?</template>
+    </category>
+
+    <category>
+      <pattern>NOTHING OLDER THAN *</pattern>
+      <template>I will ommit anything older than <set name="year"><star/></set> from my results. How about colour?</template>
+    </category>
+
+    <category>
+        <pattern>NO PREFERENCE ON COLOUR</pattern>
+        <template>Ok, I will reluctantly include brown into my search results. What is the maximum mileage?</template>
+    </category>
+
+    <category>
+        <pattern>I WANT IT TO BE *</pattern>
+        <template><set name="colour"><star/></set> is a great colour for a car. What is the maximum mileage?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON MILEAGE</pattern>
+      <template>Not a problem at all. What is the minimum amount of seats?</template>
+    </category>
+
+    <category>
+      <pattern>PREFERABLY NO MORE THAN * MILES</pattern>
+      <template>Fantastic! I will look for cars with <set name="mileage"><star/></set> miles or less. What is the minimum amout of seats?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON SEATS</pattern>
+      <template>As long as it has a drivers seat, I guess that's all that matters! Is there a prefered minimum number of doors?</template>
+    </category>
+
+    <category>
+      <pattern>I WOULD LIKE AT LEAST * SEATS</pattern>
+      <template>Perfect, I will look for no less than <set name="seats"><star/></set> seats. Is there a prefered minimum number of doors?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON DOORS</pattern>
+      <template>I wonder what the record number of doors on a car is... Anyway, what body type are you looking for?</template>
+    </category>
+
+    <category>
+      <pattern>I WANT AT LEAST * DOORS</pattern>
+      <template><set name="doors"><star/></set> doors have been set as the minimum. So, what body type are you looking for?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON BODY TYPE</pattern>
+      <template>Doors, wheels, engine, I guess the rest isn't so important. Speaking of engine, what is the minimum size engine are you looking for?</template>
+    </category>
+
+    <category>
+      <pattern>I WOULD REALLY LIKE A *</pattern>
+      <template>I once drove across Chine in a <set name="body"><star/></set>, it was rather practical, even with its small engine. Speaking of which, what is the minimum size engine you are looking for?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON ENGINE SIZE</pattern>
+      <template>That's fine. What gearbox would you like?</template>
+    </category>
+
+    <category>
+      <pattern>IT WOULD HAVE TO BE AT LEAST A *</pattern>
+      <template>That should do the job. Anything less than a <set name="engine"><star/></set> has been ruled out. What gearbox would you like?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON GEARBOX</pattern>
+      <template>Well as long as it has a forwards and backwards function I will find it! How about drivetrain? Please use acronyms</template>
+    </category>
+
+    <category>
+      <pattern>I AM AFTER A * GEARBOX</pattern>
+      <template>I will only search for <set name="gearbox"><star/></set> gearboxes. How about drivetrain? Please use acronyms</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON DRIVETRAIN</pattern>
+      <template>Ok then, what about the fuel type? If you have given me an engine size, please don't ask me for Electric cars</template>
+    </category>
+
+    <category>
+      <pattern>I THINK I AM LOOKING FOR A *</pattern>
+      <template>Excellent choice! Let me see what cars I can find that are <set name="drivetrain"><star/></set>. What fuel is it to run on? If you have given me an engine size, please don't ask me for Electric cars</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON FUEL</pattern>
+      <template>That's perfectly fine. What is the highest insurance group you want me to find? Remember the lower the number, the cheaper the insurance</template>
+    </category>
+
+    <category>
+      <pattern>CAN YOU FIND ME A * PLEASE</pattern>
+      <template>Sure! I will only show results for cars with <set name="fuel"><star/></set> powered engines. What is the highest insurance group you want me to find? Remember the lower the number, the cheaper the insurance</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON INSURANCE GROUP</pattern>
+      <template>Okey dokey. Let's talk about fuel consumption. Tell me the minimum average miles per gallon you expect</template>
+    </category>
+
+    <category>
+      <pattern>I THINK INSURANCE GROUP * WILL BE HIGH ENOUGH</pattern>
+      <template>Great! Any cars above insurance group <set name="insurance"><star/></set> will not be searched for. Let's talk about fuel consumption. Tell me the minimum average miles per gallon you expect</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON MPG</pattern>
+      <template>Let's bring all the gas guzzlers into play! How much are you willing to pay anually for car tax?</template>
+    </category>
+
+    <category>
+      <pattern>I THINK IT SHOULD DO AT LEAST * MPG</pattern>
+      <template>Anything that achieves lower than <set name="consumption"><star/></set> miles per gallon will not be displayed. How much are you willing to pay anually for car tax?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON CAR TAX</pattern>
+      <template>Did you know that vehicles manufactured before 1978 are exempt from car tax? Moving onto speed, what is the minimum number of seconds you would like the car to get from 0 to 60mph?</template>
+    </category>
+
+    <category>
+      <pattern>I DO NOT WANT TO PAY MORE THAN *</pattern>
+      <template>I will make sure that any cars which cost more than <set name="tax"><star/></set> to tax are ruled out. Moving onto speed, what is the minimum number of seconds you would like the car to get from 0 to 60mph?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON ACCELERATION TIME</pattern>
+      <template>That information is only good for bank-robbing getaway drivers anyway, (GCHQ you can stop monitoring the user now). What about emissions? How many grams of CO2 per kilometer are you willing to pollute the earth with?</template>
+    </category>
+
+    <category>
+      <pattern>I WANT SOMETHING THAT CAN GET ME TO 60MPH IN * SECONDS</pattern>
+      <template>Cars that take longer than <set name="acceleration"><star/></set> seconds to reach 60mph have been ruled out. What about emissions? How many grams of CO2 per kilometer are you willing to pollute the earth with?</template>
+    </category>
+
+    <category>
+      <pattern>NO PREFERENCE ON EMISSIONS</pattern>
+      <template>Sorry GreenPeace, ocean warming cars will be included in the search results</template>
+    </category>
+
+    <category>
+      <pattern>I DO NOT WANT THEM TO BE HIGHER THAN * G/KM</pattern>
+      <template>Let's look for cars which do not emmit more than <set name="emissions"><star/></set> grams of carbon dioxide per kilometer.</template>
+    </category>
+
+</aiml>
