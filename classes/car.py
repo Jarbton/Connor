@@ -22,4 +22,8 @@ class Car(object):
     acceleration = None
     emissions = None
 
-    def  __init__(self, results):
+	def __init__(self, results):
+		# Assign each value in the session array
+		# to the local attribute
+		for k, v in results.iteritems():
+			setattr(self, k, v)

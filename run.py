@@ -31,17 +31,45 @@ def ask():
     # Get response from HTML/JS
     bot_response = kernel.respond(str(request.form['chatmessage']))
 
-    # Get variables and test by printing
-    session['colour'] = kernel.getPredicate("colour")
+    # Get variables
+    session['make'] = kernel.getPredicate("make")
     session['model'] = kernel.getPredicate("model")
-    print session['colour']
-    print session['model']
+    session['variant'] = kernel.getPredicate("variant")
+    session['price'] = kernel.getPredicate("price")
+    session['year'] = kernel.getPredicate("year")
+    session['colour'] = kernel.getPredicate("colour")
+    session['mileage'] = kernel.getPredicate("mileage")
+    session['seats'] = kernel.getPredicate("seats")
+    session['doors'] = kernel.getPredicate("doors")
+    session['body'] = kernel.getPredicate("body")
+    session['engine'] = kernel.getPredicate("engine")
+    session['gearbox'] = kernel.getPredicate("gearbox")
+    session['drivetrain'] = kernel.getPredicate("drivetrain")
+    session['fuel'] = kernel.getPredicate("fuel")
+    session['insurance'] = kernel.getPredicate("insurance")
+    session['consumption'] = kernel.getPredicate("consumption")
+    session['tax'] = kernel.getPredicate("tax")
+    session['acceleration'] = kernel.getPredicate("acceleration")
+    session['emissions'] = kernel.getPredicate("emissions")
 
-    # Query database and test by printing
-    # TODO: create concat string from session loop
-    c.execute("SELECT * FROM CarTable WHERE Colour =  AND Model = '%s'")
+    # Format the query from the users inputs
+    sQuery = "SELECT * FROM cars WHERE make = ehaeh"
+    for k, v in user_input.iteritems():
+    	if v:
+    		sQuery += " AND %s = %s" % (k, v)
+    print sQuery
+
+    # Query the database
+    c.execute(sQuery)
     results = c.fetchall()
     print results
+
+    #Load results if typed 'search'
+    if request.form['chatmessage'] == "search"
+        results_cars = []
+        for result in results:
+        	results_cars.append(car(result))
+        return render_template("search.html", results_cars)
 
     # Return response
     return jsonify({'status':'OK','answer':"bot_response"})
@@ -53,15 +81,7 @@ def shop():
 if __name__ == "__main__":
     app.run()
 
-class Dealer:
-    firstname = None
-    lastname = None
-    streetName = None
-    houseNameNumber = None
-    city = None
-    postcode = None
-    email = None
-    contactNumber = None
+## TODO: Create dealer stuff
 
 class SParameter:
     make = None
