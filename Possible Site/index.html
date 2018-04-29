@@ -15,9 +15,65 @@
 	<link href="css/animate.min.css" rel="stylesheet"> 
 	<link href="css/style.css" rel="stylesheet" />	
    <style>
-    
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
 
 
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    height: 250px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
 /* Chat containers */
 .containeri {
     border: 2px solid #dedede;
@@ -76,6 +132,7 @@ position: static;
 
   </head>
 
+
   <body>
 	
 	<header id="header">
@@ -91,10 +148,117 @@ position: static;
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">Connor The Car Conniser</a>
-                </div>				
+                </div>			
+<!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/styles.css')}}">
+
+    <!-- Chat references -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <title>Car buyer</title>
+  </head>
+
+  <!-- Test formatting -->
+  <body>  
+    
+    <!-- Content -->
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Hi there</h1>
+    <!-- Chat -->
+    <div class="container">
+      <div class="row">
+          <div class="col-md-5">
+              <div class="panel panel-primary">
+                  <div class="panel-heading" id="accordion">
+                      <span class="glyphicon glyphicon-comment"></span> Chat
+                      <div class="btn-group pull-right">
+                          <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                              <span class="glyphicon glyphicon-chevron-down"></span>
+                          </a>
+                      </div>
+                  </div>
+              <div class="panel-collapse collapse" id="collapseOne">
+                  <div class="panel-body">
+                      <ul class="chat">
+                          <li class="left clearfix"><span class="chat-img pull-left">
+                              <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                          </span>
+                              <div class="chat-body clearfix">
+                                  <div class="header">
+                                      <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+                                          <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                                  </div>
+                                  <p>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                      dolor, quis ullamcorper ligula sodales.
+                                  </p>
+                              </div>
+                          </li>
+                          <li class="right clearfix"><span class="chat-img pull-right">
+                              <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                          </span>
+                              <div class="chat-body clearfix">
+                                  <div class="header">
+                                      <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                  </div>
+                                  <p>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                      dolor, quis ullamcorper ligula sodales.
+                                  </p>
+                              </div>
+                          </li>
+                          <li class="left clearfix"><span class="chat-img pull-left">
+                              <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                          </span>
+                              <div class="chat-body clearfix">
+                                  <div class="header">
+                                      <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+                                          <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                                  </div>
+                                  <p>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                      dolor, quis ullamcorper ligula sodales.
+                                  </p>
+                              </div>
+                          </li>
+                          <li class="right clearfix"><span class="chat-img pull-right">
+                              <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                          </span>
+                              <div class="chat-body clearfix">
+                                  <div class="header">
+                                      <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+                                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                  </div>
+                                  <p>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                      dolor, quis ullamcorper ligula sodales.
+                                  </p>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="panel-footer">
+                      <div class="input-group">
+                          <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                          <span class="input-group-btn">
+                              <button class="btn btn-warning btn-sm" id="btn-chat">
+                                  Send</button>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+    </div>
+                </div>
+            </div>	
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#header">Home</a></li>
@@ -105,14 +269,12 @@ position: static;
                         <li><a href="#five">Estate</a></li>   
 						<li><a href="#six">Coupe</a></li>
 						<li><a href="#sevn">Our Team</a></li>
-						<li><a href="#pricing">New Cars</a></li>
 						<li><a href="#contact">Contact Us</a></li>   
-						<li><a href="#chatbox">ChatBot</a>
-				  </ul>
-                </div>
-            </div>
+                    </ul>
+ 
         </nav>		
     </header>	
+
 	<div class="slider">		
 		<div id="about-slider">
 			<div id="carousel-slider" class="carousel slide" data-ride="carousel">
@@ -155,6 +317,7 @@ position: static;
 						<div class="carousel-caption">
 							<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.0s">								
 								<h2>Connor The Chatbot</h2>
+
 							</div>
 							<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.3s">								
 								<p>Available 24/7 to answer any questions</p>
@@ -354,7 +517,6 @@ position: static;
 			</div>
 		</div>
 	</div>
-	
 	<div id="three">
 		<div class="container">
 			<div class="text-center">
@@ -429,7 +591,6 @@ position: static;
 			</div>
 		</div>
 	</div>
-	
 	<div id="four">
 		<div class="container">
 			<div class="text-center">
@@ -504,7 +665,6 @@ position: static;
 			</div>
 		</div>
 	</div>
-	
 	<div id="five">
 		<div class="container">
 			<div class="text-center">
@@ -580,83 +740,36 @@ position: static;
 		</div>
 	</div>
 	
-	<div id="six">
-		<div class="container">
+	<div class="parallax-window">
+		<div class="col-md-6 col-md-offset-3">
 			<div class="text-center">
-				<h3>Coupee</h3>
-				<h2><p>Take a look<br>at our quality coupee</p></h2>
-			</div>
-					<div class="row">
-				<figure class="effect-chico">						
-					<div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-						<a href="img/work/rover.jpeg" class="flipLightBox">
-						<img src="img/work/rover.jpeg" class="img-responsive" alt="">
-						</a>						
-					</div>
-				</figure>
-				<figure class="effect-chico">
-					<div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-						<a href="img/work/rover.jpeg" class="flipLightBox">
-						<img src="img/work/rover.jpeg" class="img-responsive" alt="">
-						</a>
-					</div>
-				</figure>	
-				<figure class="effect-chico">
-					<div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-						<a href="img/work/rover.jpeg" class="flipLightBox">
-						<img src="img/work/rover.jpeg" class="img-responsive" alt="">
-						</a>
-					</div>
-				</figure>
-				<figure class="effect-chico">
-					<div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-						<a href="img/work/rover.jpeg" class="flipLightBox">
-						<img src="img/work/rover.jpeg" class="img-responsive" alt="">
-						</a>
-					</div>	
-				</figure>
-			</div>
-		</div>
-		</div>
-		
-	<div id="six">	
-		<div class="gallery">
-			<div class="container">
-				<div class="row">
-					<figure class="effect-chico">
-						<div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-							<a href="img/work/rover.jpeg" class="flipLightBox">
-							<img src="img/work/rover.jpeg" class="img-responsive" alt="">
-							</a>
-						</div>
-					</figure>	
-					<figure class="effect-chico">
-						<div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-							<a href="img/work/rover.jpeg" class="flipLightBox">
-							<img src="img/work/rover.jpeg" class="img-responsive" alt="">
-							</a>
-						</div>
-					</figure>	
-					<figure class="effect-chico">
-						<div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-							<a href="img/work/rover.jpeg" class="flipLightBox">
-							<img src="img/work/rover.jpeg" class="img-responsive" alt="">
-							</a>
-						</div>
-					</figure>	
-					<figure class="effect-chico">
-						<div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-							<a href="img/work/rover.jpeg" class="flipLightBox">
-							<img src="img/work/rover.jpeg" class="img-responsive" alt="">
-							</a>
-						</div>
-					</figure>
+				<div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.2s">
+					<h2>Account</h2>
+				</div>
+				<div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.6s">
+					<p>For More Offers<br>
+					Create An Account Or Login.
+					</p>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	
+		<div class="sub-parallax">
+			<div class="text-center">
+				<div class="col-md-12">
+					<div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.9s">
+						<form class="form-inline">
+							<div class="form-group">
+								<button type="purchase" name="purchase" class="btn btn-primary btn-lg" required="required">Sign Up</button>
+							</div>
+							<div class="form-group">
+								<button type="subscribe" name="subscribe" class="btn btn-primary btn-lg" required="required">Log In</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!--/#parallax-window-->
 	
 	<div id="pricing">
 		<div class="container">
@@ -910,129 +1023,8 @@ position: static;
 
 
 
-<style>
-body {
-    font-family: Garamond;
-}
 
-h1 {
-    color: black;
-    margin-bottom: 0;
-    margin-top: 0;
-    text-align: center;
-    font-size: 40px;
-}
-
-h3 {
-    color: black;
-    font-size: 20px;
-    margin-top: 3px;
-    text-align: center;
-}
-
-#chatbox {
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    margin-top: 60px;
-}
-
-#userInput {
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    margin-top: 60px;
-}
-
-#textInput {
-    width: 87%;
-    border: none;
-    border-bottom: 3px solid #009688;
-    font-family: monospace;
-    font-size: 17px;
-}
-
-#buttonInput {
-    padding: 3px;
-    font-family: monospace;
-    font-size: 17px;
-}
-
-.userText {
-    color: white;
-    font-family: monospace;
-    font-size: 17px;
-    text-align: right;
-    line-height: 30px;
-}
-
-.userText span {
-    background-color: #009688;
-    padding: 10px;
-    border-radius: 2px;
-}
-
-.botText {
-    color: white;
-    font-family: monospace;
-    font-size: 17px;
-    text-align: left;
-    line-height: 30px;
-}
-
-.botText span {
-    background-color: #EF5350;
-    padding: 10px;
-    border-radius: 2px;
-}
-
-#tidbit {
-    position:absolute;
-    bottom:0;
-    right:0;
-    width: 300px;
-}
-</style>
-	
-		<head>
-		<link rel="stylesheet" type="text/css" href="/static/style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		</head>
-		<body>
-			<h1>CONNER</h1>
-			<h3>Have a chat with Conner</h3>
-	<div>
-      <div id="chatbox">
-        <p class="botText"><span>Hi! I'm Conner the car connoisseur</span></p>
-      </div>
-      <div id="userInput">
-        <input id="textInput" type="text" name="msg" placeholder="Message">
-        <input id="buttonInput" type="submit" value="Send">
-      </div>
-      <script>
-        function getBotResponse() {
-          var rawText = $("#textInput").val();
-          var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
-          $("#textInput").val("");
-          $("#chatbox").append(userHtml);
-          document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-          $.get("/get", { msg: rawText }).done(function(data) {
-            var botHtml = '<p class="botText"><span>' + data + '</span></p>';
-            $("#chatbox").append(botHtml);
-            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-          });
-        }
-        $("#textInput").keypress(function(e) {
-            if(e.which == 13) {
-                getBotResponse();
-            }
-        });
-        $("#buttonInput").click(function() {
-          getBotResponse();
-        })
-      </script>
-    </div>
-  </div>
+  
   </body>
 </html>
 
