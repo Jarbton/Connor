@@ -4,13 +4,15 @@ conn = sqlite3.connect('connor.db')
 
 c = conn.cursor()
 
+c.execute("PRAGMA foreign_keys = on")
 ## Creating ModelNoTable
 c.execute("""CREATE TABLE ModelNoTable (
 			ModelNumber INTEGER PRIMARY KEY,
 			NumberOfSeats INTEGER,
 			NumberOfDoors INTEGER,
 			BodyType TEXT
-			)""")
+			)""")			
+conn.commit()
 
 ## Creating MechanicalDataTable
 c.execute("""CREATE TABLE MechanicalDataTable (
@@ -19,22 +21,25 @@ c.execute("""CREATE TABLE MechanicalDataTable (
 			GearboxType TEXT,
 			Drivetrain TEXT,
 			FuelType TEXT
-			)""")
+			)""")		
+conn.commit()
 
 ## Creating AffordabilityTable
 c.execute("""CREATE TABLE AffordabilityTable (
 			AffordabilityNumber INTEGER PRIMARY KEY,
-			InsuranceGroup TEXT,
-			FuelConsumption TEXT,
+			InsuranceGroup INTEGER,
+			FuelConsumption INTEGER,
 			AnnualTax REAL
-			)""")
+			)""")			
+conn.commit()
 
 ## Creating StatisticalDataTable
 c.execute("""CREATE TABLE StatisticalDataTable (
 			StatisticalDataNumber INTEGER PRIMARY KEY,
 			AccelerationTime REAL,
-			Co2Emissions TEXT
-			)""")
+			Co2Emissions INTEGER
+			)""")		
+conn.commit()
 
 ## Creating DealerTable
 c.execute("""CREATE TABLE DealerTable (
@@ -49,26 +54,29 @@ c.execute("""CREATE TABLE DealerTable (
 			ContactNumber INTEGER,
 			IsPrivate INTEGER
 			)""")
+conn.commit()
 
 ## Creating CarTable
 c.execute("""CREATE TABLE CarTable (
-			RegNumber TEXT PRIMARY KEY,
+			CarId INTEGER PRIMARY KEY,
+			RegNumber TEXT,
 			Make TEXT,
 			Model TEXT,
 			ModelVariant TEXT,
 			Price REAL,
 			YearOfManufacture INTEGER,
 			Colour TEXT,
+			Mileage INTEGER,
 			ModelNumber INTEGER,
 			MechanicalNumber INTEGER,
 			AffordabilityNumber INTEGER,
 			StatisticalDataNumber INTEGER,
-			DealrshipNumber INTEGER,
+			DealrshipNumber INTEGER,								
 			FOREIGN KEY(ModelNumber) REFERENCES ModelNoTable(ModelNumber),
 			FOREIGN KEY(MechanicalNumber) REFERENCES MechanicalDataTable(MechanicalNumber),
 			FOREIGN KEY(AffordabilityNumber) REFERENCES AffordabilityTable(AffordabilityNumber),
 			FOREIGN KEY(StatisticalDataNumber) REFERENCES StatisticalDataTable(StatisticalDataNumber),
-			FOREIGN KEY(DealrshipNumber) REFERENCES DealerTable(DealrshipNumber)
+			FOREIGN KEY(DealrshipNumber) REFERENCES DealerTable(DealrshipNumber)			
 			)""")
-
+				
 conn.commit()
